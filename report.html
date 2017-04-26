@@ -1,0 +1,38 @@
+<html>
+<head>
+
+<title>Parking Spot Data</title>
+
+<script type="text/javascript" src="jscharts.js"></script>
+
+</head>
+<body>
+
+<div id="graph">Loading graph...</div>
+
+<script type="text/javascript">
+	
+	var myData = new Array(['12am', 2], ['1am', 0], ['2am', 3], ['3am', 4], ['4am', 3], ['5am', 2], ['6am', 1], ['7am', 0], ['8am', 2], ['9am', 3], ['10am', 1], ['11am', 4], ['12pm', 0], ['1pm', 0], ['2pm', 1], ['3pm', 2], ['4pm', 4], ['5pm', 2], ['6pm', 1], ['7pm', 1], ['8pm', 0], ['9pm', 2], ['10pm', 3], ['11pm', 2]);
+	var myChart = new JSChart('graph', 'line');
+	myChart.setDataArray(myData);
+	myChart.setLineColor('#8D9386');
+	myChart.setLineWidth(4);
+	myChart.setTitleColor('#7D7D7D');
+	myChart.setAxisColor('#9F0505');
+	myChart.setGridColor('#a4a4a4');
+	myChart.setAxisValuesColor('#333639');
+	myChart.setAxisNameColor('#333639');
+	myChart.setAxisNameX('Time');
+	myChart.setAxisNameY('Available Parking Spaces');
+	myChart.setTitle('Parking Spot Report');
+	myChart.setIntervalY(0, 4);
+	//myChart.setAxisValuesDecimalsY(0);
+	myChart.setSize(800, 400);
+	myChart.setAxisValuesFontSizeY(16);
+	myChart.setGrid(false);
+	myChart.draw();
+	
+</script>
+
+</body>
+</html>
