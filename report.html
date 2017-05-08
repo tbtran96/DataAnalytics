@@ -3,7 +3,7 @@
 
 <title>Parking Spot Data</title>
 
-<script type="text/javascript" src="jscharts.js"></script>
+<script type="text/javascript" src="static/js/jscharts.js"></script>
 
 </head>
 <body>
@@ -12,11 +12,38 @@
 
 <script type="text/javascript">
 
-	var am12 = 2;
-	var am1 = 0;
+
+
+	var t0 = {{ t0 }};
+	var t1 = {{ t1 }};
+	var t2 = {{ t2 }};
+	var t3 = {{ t3 }};
+	var t4 = {{ t4 }};
+	var t5 = {{ t5 }};
+	var t6 = {{ t6 }};
+	var t7 = {{ t7 }};
+	var t8 = {{ t8 }};
+	var t9 = {{ t9 }};
+	var t10 = {{ t10 }};
+	var t11 = {{ t11 }};
+	var t12 = {{ t12 }};
+	var t13 = {{ t13 }};
+	var t14 = {{ t14 }};
+	var t15 = {{ t15 }};
+	var t16 = {{ t16 }};
+	var t17 = {{ t17 }};
+	var t18 = {{ t18 }};
+	var t19 = {{ t19 }};
+	var t20 = {{ t20 }};
+	var t21 = {{ t21 }};
+	var t22 = {{ t22 }};
+	var t23 = {{ t23 }};
 	
-	var myData = new Array(['12am', am12], ['1am', am1], ['2am', 3], ['3am', 4], ['4am', 3], ['5am', 2], ['6am', 1], ['7am', 0], ['8am', 2], ['9am', 3], ['10am', 1], ['11am', 4], ['12pm', 0], ['1pm', 0], ['2pm', 1], ['3pm', 2], ['4pm', 4], ['5pm', 2], ['6pm', 1], ['7pm', 1], ['8pm', 0], ['9pm', 2], ['10pm', 3], ['11pm', 2]);
+	
+	var myData = new Array(['12am', t0], ['1am', t1], ['2am', t2], ['3am', t3], ['4am', t4], ['5am', t5], ['6am', t6], ['7am', t7], ['8am', t8], ['9am', t9], ['10am', t10], ['11am', t11], ['12pm', t12], ['1pm', t13], ['2pm', t14], ['3pm', t15], ['4pm', t16], ['5pm', t17], ['6pm', t18], ['7pm', t19], ['8pm', t20], ['9pm', t21], ['10pm', t22], ['11pm', t23]);
 	var myChart = new JSChart('graph', 'bar');
+	myChart.setShowYValues(false);
+	myChart.setBarValues(false);
 	myChart.setDataArray(myData);
 	myChart.setLineColor('#8D9386');
 	myChart.setLineWidth(4);
@@ -26,11 +53,11 @@
 	myChart.setAxisValuesColor('#333639');
 	myChart.setAxisNameColor('#333639');
 	myChart.setAxisNameX('Time');
-	myChart.setAxisNameY('Space Open');
-	myChart.setTitle('Parking Spot Report');
+	myChart.setAxisNameY('Availability');
+	myChart.setTitle('Daily Parking Spot Report by Hour');
 	
 	//myChart.setAxisValuesDecimalsY(0);
-	myChart.setSize(800, 200);
+	myChart.setSize(1000, 300);
 	
 	myChart.setGrid(false);
 	myChart.draw();
